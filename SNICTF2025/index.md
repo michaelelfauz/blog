@@ -41,7 +41,7 @@ Dekripsi dan Flag
 karena kita sudah mendapatkan info yang diperlukan baru bisa bikin solver nya
 
 s.py
-```python!
+```python
 from Crypto.Cipher import AES
 import hashlib
 
@@ -372,7 +372,7 @@ Contoh constraint yang digunakan:
 
 Karena semua operasi bersifat deterministik, maka key tidak perlu brute force, melainkan bisa diselesaikan dengan solver matematis.
 s.py
-```python!
+```python
 from base64 import b64decode
 from Crypto.Cipher import ChaCha20
 
@@ -516,7 +516,7 @@ Dengan mempertimbangkan:
 
 karena semua info yang diperlukan sudah ada jadi kita bisa membuat solvernya, ini solver yang saya pakai:
 solver.py
-```python!
+```python
 table = "Z1aB2bC3cD4dE5eF6fG7gH8hI9iJ0jKkLlMmNnOoPpQqRrSsTtUuVvWwXxYy+/"
 cipher = "uSd/VDXDVvD1DTp5TDDV5Tp1n9vItfW81Xf1N5Ivxbgl"
 
@@ -2110,6 +2110,7 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+
 
 
 #### Flag: SNI{i_dont_know_what_kind_of_pwn_this_is_but_there_you_go_37801284812}
