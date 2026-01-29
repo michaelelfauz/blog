@@ -1,51 +1,113 @@
-/* Custom Dark Navy Theme for CTF Writeups */
+/* Pure Black Theme with Neon Green Accents for CTF Writeups */
 
 :root {
-    /* Dark navy color scheme */
-    --body-background: #1a1f2e;
-    --accent-color: #8b5cf6;
-    --accent-color-darker: #7c3aed;
-    --accent-color-text: #ffffff;
-    --body-text-color: #e5e7eb;
-    --card-background: #252b3b;
-    --card-background-selected: #2d3548;
+    /* Pure Black Theme */
+    --body-background: #0a0a0a;
+    --card-background: #151515;
+    --card-background-selected: #1a1a1a;
     
-    /* Updated colors for better dark theme */
-    --code-background-color: #1e2330;
-    --code-text-color: #f8f8f2;
-    --link-background-color: #8b5cf6;
-    --link-background-color-hover: #7c3aed;
-    --pre-background-color: #1e2330;
-    --pre-text-color: #f8f8f2;
+    /* Text colors */
+    --body-text-color: #e8e8e8;
+    --body-text-color-secondary: #b0b0b0;
+    
+    /* Green accent color */
+    --accent-color: #00ff41;
+    --accent-color-darker: #00cc33;
+    --accent-color-text: #0a0a0a;
+    
+    /* Code highlighting - neon green */
+    --code-background-color: #0d0d0d;
+    --code-text-color: #e8e8e8;
+    --code-highlight-color: #00ff41;
+    --inline-code-background: #151515;
+    --inline-code-color: #00ff41;
+    
+    /* Links */
+    --link-background-color: #00ff41;
+    --link-background-color-hover: #00cc33;
+    
+    /* Pre/code blocks */
+    --pre-background-color: #0d0d0d;
+    --pre-text-color: #e8e8e8;
+    --pre-border-color: #1a1a1a;
+    
+    /* Border colors */
+    --border-color: #252525;
+    --border-color-subtle: #1a1a1a;
 }
 
 [data-scheme="dark"] {
-    --body-background: #1a1f2e;
-    --accent-color: #8b5cf6;
-    --accent-color-darker: #7c3aed;
-    --accent-color-text: #ffffff;
-    --body-text-color: #e5e7eb;
-    --card-background: #252b3b;
-    --card-background-selected: #2d3548;
-    --code-background-color: #1e2330;
-    --link-background-color: #8b5cf6;
+    --body-background: #0a0a0a;
+    --card-background: #151515;
+    --accent-color: #00ff41;
+    --body-text-color: #e8e8e8;
+    --code-highlight-color: #00ff41;
 }
 
-/* Article cards styling */
+/* Font size reduction for more compact layout */
+html {
+    font-size: 14px; /* Reduced from default 16px */
+}
+
+body {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background-color: var(--body-background);
+}
+
+/* Heading sizes - reduced */
+h1 { font-size: 1.8rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.3rem; }
+h4 { font-size: 1.15rem; }
+h5 { font-size: 1.05rem; }
+h6 { font-size: 0.95rem; }
+
+/* Article title */
+.article-title {
+    font-size: 1.8rem !important;
+}
+
+/* Article list titles */
+.article-list .article-title {
+    font-size: 1.4rem !important;
+}
+
+/* Sidebar text */
+.sidebar {
+    font-size: 0.9rem;
+}
+
+/* Menu items */
+.menu-item {
+    font-size: 0.95rem;
+}
+
+/* Code blocks */
+code {
+    font-size: 0.85rem;
+}
+
+pre code {
+    font-size: 0.8rem;
+}
+
+/* Article cards styling - pure black theme */
 .article-list article {
     background-color: var(--card-background);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     transition: all 0.3s ease;
     
     &:hover {
+        background-color: var(--card-background-selected);
         transform: translateY(-4px);
-        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-        border-color: rgba(139, 92, 246, 0.3);
+        border-color: var(--accent-color);
+        box-shadow: 0 8px 16px rgba(0, 255, 65, 0.1);
     }
 }
 
-/* Category badges */
+/* Category badges - green theme */
 .article-category a {
     border-radius: 6px;
     padding: 4px 12px;
@@ -55,47 +117,50 @@
     letter-spacing: 0.5px;
     
     &[href*="write-up"] {
-        background: linear-gradient(135deg, #ec4899, #8b5cf6);
-        color: white;
+        background: linear-gradient(135deg, var(--accent-color), var(--accent-color-darker));
+        color: var(--accent-color-text);
     }
     
     &[href*="blog"] {
-        background: #4b5563;
-        color: white;
+        background: var(--border-color);
+        color: var(--accent-color);
+        border: 1px solid var(--accent-color);
     }
 }
 
 /* Sidebar styling */
 .left-sidebar {
-    background-color: var(--card-background);
+    background-color: var(--body-background);
+    border-right: 1px solid var(--border-color-subtle);
 }
 
-/* Tag cloud styling */
+/* Tag cloud styling - green theme */
 .tagCloud-tags a {
-    background-color: rgba(139, 92, 246, 0.2);
-    border: 1px solid rgba(139, 92, 246, 0.4);
+    background-color: rgba(0, 255, 65, 0.1);
+    border: 1px solid rgba(0, 255, 65, 0.3);
     border-radius: 6px;
     padding: 6px 12px;
-    color: var(--body-text-color);
+    color: var(--accent-color);
     transition: all 0.2s ease;
     
     &:hover {
-        background-color: rgba(139, 92, 246, 0.4);
-        border-color: rgba(139, 92, 246, 0.6);
+        background-color: rgba(0, 255, 65, 0.2);
+        border-color: rgba(0, 255, 65, 0.5);
         transform: scale(1.05);
     }
 }
 
-/* Code block enhancements */
+/* Code block enhancements - pure black with green */
 .article-content {
     pre {
-        background-color: var(--code-background-color);
+        background-color: var(--code-background-color) !important;
         border-radius: 8px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
+        border: 1px solid var(--border-color-subtle);
     }
     
     code {
-        background-color: rgba(139, 92, 246, 0.15);
+        background-color: var(--inline-code-background);
+        color: var(--inline-code-color);
         padding: 2px 6px;
         border-radius: 4px;
         font-size: 0.9em;
@@ -103,19 +168,27 @@
     
     pre code {
         background-color: transparent;
+        color: var(--code-text-color);
         padding: 0;
     }
 }
 
-/* Search widget */
+/* Inline code with green highlight */
+p code, li code, td code {
+    background-color: var(--inline-code-background) !important;
+    color: var(--inline-code-color) !important;
+    border: 1px solid var(--border-color);
+}
+
+/* Search widget - green theme */
 .search-form {
     background-color: var(--card-background);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
     border-radius: 8px;
     
     &:focus-within {
         border-color: var(--accent-color);
-        box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+        box-shadow: 0 0 0 3px rgba(0, 255, 65, 0.2);
     }
 }
 
@@ -123,5 +196,73 @@
 .widget {
     background-color: var(--card-background);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--border-color);
+}
+
+/* Links - green accent */
+a {
+    color: var(--accent-color);
+    
+    &:hover {
+        color: var(--accent-color-darker);
+    }
+}
+
+/* Buttons and interactive elements */
+button, .button {
+    background-color: var(--accent-color);
+    color: var(--accent-color-text);
+    
+    &:hover {
+        background-color: var(--accent-color-darker);
+    }
+}
+
+/* Reading time and metadata - green accent */
+.article-time, .article-subtitle {
+    color: var(--accent-color);
+}
+
+/* TOC styling */
+.table-of-contents {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    
+    .active {
+        color: var(--accent-color);
+        border-left-color: var(--accent-color);
+    }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: var(--body-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--border-color);
+    border-radius: 4px;
+    
+    &:hover {
+        background-color: var(--accent-color);
+    }
+}
+
+/* Selection color */
+::selection {
+    background-color: var(--accent-color);
+    color: var(--accent-color-text);
+}
+
+/* Border colors throughout */
+hr {
+    border-color: var(--border-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--body-background);
+    border-top: 1px solid var(--border-color-subtle);
+    color: var(--body-text-color-secondary);
 }
