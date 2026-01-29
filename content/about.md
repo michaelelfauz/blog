@@ -3,11 +3,6 @@ title: "About"
 description: "About michaelelfauz and this CTF writeup blog"
 date: 2026-01-28
 draft: false
-menu:
-    main:
-        weight: 2
-        params:
-            icon: user
 ---
 
 ## Welcome to my CTF Writeup Blog! 🔐
