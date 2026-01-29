@@ -17,7 +17,7 @@ Hal ini menunjukkan bahwa file tersebut sebenarnya adalah firmware image yang me
 Filesystem kemudian diekstrak menggunakan binwalk -e.
 Eksplorasi Filesystem
 Di dalam filesystem ditemukan beberapa file penting:
-![image](https://hackmd.io/_uploads/H1T7RGdQ-e.png)
+![image](image/image1.png)
 
 Keberadaan source code (.c) menunjukkan bahwa challenge ini mengarah ke analisis logika sistem, bukan brute force.
 Analisis Key Derivation
@@ -70,7 +70,7 @@ print(plaintext)
 ```
 
 Result:
-![image](https://hackmd.io/_uploads/rJ-_CMO7We.png)
+![image](image/image2.png)
 
 Format flag mengikuti format kompetisi, sehingga flag akhirnya adalah:
 #### FLAG: SNI{ayo_belajar_firmware_00eefdbc83aca3}
@@ -81,7 +81,7 @@ Format flag mengikuti format kompetisi, sehingga flag akhirnya adalah:
 Diberikan sebuah challenge reverse engineering berupa file Jajajaja.exe.
 Sekilas file terlihat seperti binary Windows biasa, namun setelah dicek menggunakan file, ternyata executable tersebut adalah Zip archive dengan data tambahan di awal, yang mengindikasikan penggunaan Launch4j sebagai Java launcher.
 Setelah executable di-rename menjadi .zip dan di-extract, ditemukan beberapa file .class Java, di antaranya:
-![image](https://hackmd.io/_uploads/ByGZkm_mbe.png)
+![image](image/image3.png)
 
 Dari sini dapat disimpulkan bahwa challenge ini bukan native binary, melainkan Java application yang dibungkus ke dalam EXE.
 Analisis Awal
@@ -387,7 +387,7 @@ print(cipher.decrypt(ciphertext).decode())
 ```
 
 Dengan menurunkan satu per satu constraint tersebut, diperoleh nilai:
-![image](https://hackmd.io/_uploads/SkfpxXOXbx.png)
+![image](image/image4.png)
 
 * s1 = 0x68544401
 * s2 = 0x53478f9e
@@ -423,13 +423,13 @@ Nonce: oqKbQ+ltdeq80Mxk
 Counter: 1337
 Ciphertext: 4cyqC2Y5nLRYn/XbyB4xg25Ie0oi3Y+4LR1YWDA=
 lalu
-![image](https://hackmd.io/_uploads/rkJAb7dm-l.png)
+![image](image/image5.png)
 
 masukkan key:
 `68544401-53478f9e-8033e38f-2bf8c27d`
 
 Result:
-![image](https://hackmd.io/_uploads/r1e7Mmdm-x.png)
+![image](image/image6.png)
 
 #### FLAG: SNI{r3v_J4v4_L4unch4r_9f2b1e}
 
@@ -437,7 +437,7 @@ Result:
 Diberikan sebuah challenge ELF 64-bit dengan proteksi standar (PIE, stripped). Program ini menerima input string dan mengeluarkan hasil encoded message. Sekilas, dari tampilan output dan karakter yang digunakan, encoding ini terlihat seperti Base64, namun setelah dianalisis lebih lanjut ternyata bukan Base64 standar.
 Analisis Awal
 Dari hasil strings, ditemukan sebuah tabel karakter sepanjang 64 byte:
-![image](https://hackmd.io/_uploads/BJsrXQdXZg.png)
+![image](image/image7.png)
 
 `Z1aB2bC3cD4dE5eF6fG7gH8hI9iJ0jKkLlMmNnOoPpQqRrSsTtUuVvWwXxYy+/`
 
@@ -486,7 +486,7 @@ input_char
 
 File r
 File r berisi string hasil encoding:
-![image](https://hackmd.io/_uploads/HJTQVQuQWe.png)
+![image](image/image8.png)
 
 `uSd/VDXDVvD1DTp5TDDV5Tp1n9vItfW81Xf1N5Ivxbgl`
 
@@ -543,7 +543,7 @@ for c in cipher:
 ```
 
 Result:
-![image](https://hackmd.io/_uploads/ByzlHmu7Wx.png)
+![image](image/image9.png)
 #### FLAG: SNI{reverse_engineering_custom64_vm_bitswap}
 
 
@@ -985,7 +985,7 @@ if __name__ == "__main__":
 ```
 
 Result:
-![image](https://hackmd.io/_uploads/SyyVKmu7-x.png)
+![image](image/image10.png)
 #### Flag: SNI{N1c3_0ne_Y0u_S0lV3d_Th3_M4zeD_Th3_Fl4g_1s_Th3_Fl4g}
 
 
@@ -1172,7 +1172,7 @@ for e1 in range(-B, B+1):
 
 
 Result:
-![image](https://hackmd.io/_uploads/SyXoVNd7Ze.png)
+![image](image/image11.png)
 
 #### Flag: SNI{3cds4_1s_v3ry_fun}
 
@@ -1680,7 +1680,7 @@ Exploit Strategy
 1. Leak flag menggunakan slicing (xs(start, len))
 
 Contoh payload inti:
-![image](https://hackmd.io/_uploads/By-xeKq7Zx.png)
+![image](image/image12.png)
 
 Payload dikirim berulang dengan menaikkan index i sampai seluruh flag terbaca.
 saya memakai kode bash sederhana ini untuk mendapatkan flag
@@ -1757,7 +1757,7 @@ Cara Solve
 Akses endpoint list image:
 
 curl http://<HOST>:4321/api/images
-    ![image](https://hackmd.io/_uploads/HybTxY5Qbl.png)
+    ![image](image/image12.png)
 
 Perhatikan field title pada response JSON
 
