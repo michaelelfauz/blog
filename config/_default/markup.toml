@@ -1,0 +1,9 @@
+[goldmark]
+  [goldmark.renderer]
+    unsafe = true
+    
+[highlight]
+  style = "monokai"
+  lineNos = true
+  lineNumbersInTable = true
+  noClasses = false

@@ -1,0 +1,15 @@
+baseURL = "https://michaelelfauz.github.io/blog/"
+languageCode = "en-us"
+title = "CTF Writeups - michaelelfauz"
+defaultContentLanguage = "en"
+hasCJKLanguage = false
+
+# Theme configuration
+theme = "hugo-theme-stack"
+
+[pagination]
+  pagerSize = 10
+
+[permalinks]
+  posts = "/p/:slug/"
+  page = "/:slug/"
