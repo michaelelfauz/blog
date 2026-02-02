@@ -1,37 +1,32 @@
 ---
-title: "HACKTACTF 2026 FINAL"
-description: "I played in the Hackta x Ruangguru CTF and got 3rd place in the finals 🥉"
-date: 2026-02-02
-draft: false
-image: ""
-categories:
-  - Write-Up
-tags:
-  - International
-  - CTF
-  - HACKTACTF
+title: HACKTACTF 2025
+
 ---
+
+# HACKTACTF 2025
+
+Disini saya ikut event ctf yang diselenggarakan oleh komunitas hackta x ruang guru dan mendapatkan peringkat 3 di final🥉
 
 # Cryptography
 ## Caesar’s Overconfidence
 
-![1](image1.png)
+![1](image/image1.png)
 
 ### Overview
 Diberikan sebuah file .txt bernama message.txt yang berisi 
-![image](image2.png)
+![image](image/image2.png)
 
 ### Analyze
 Setelah saya liat liat sepertinya ini rot13 tapi ternyata bukan jadi saya coba metode lain dan ternyata metode enkripsinya adalah rot23
 
 ### Solution
 Disini saya menggunakan tools online yaitu https://rot13.com/
-![2](image3.png)
+![2](image/image3.png)
 
 **FLAG: HACKTA{caesar_is_still_weak}**
 
 ## Polite Alphabet
-![3](image4.png)
+![3](image/image4.png)
 
 ### Overview
 Diberikan sebuah 2 file yang bernama ciphert.txt dan guest.txt, dari deskripsi dijelaskan bahwa metode encrypt adalah menggunakan Vigenère Cipher, tugas kita adalah mendecrypt pesan yang di encrypt tersebut menggunakan Vigenère Cipher, dan juga kita diberikan guest.txt yang berisi nama "tamu"
@@ -40,21 +35,21 @@ Diberikan sebuah 2 file yang bernama ciphert.txt dan guest.txt, dari deskripsi d
 Disini saya menggunakan tools online yaitu https://gchq.github.io/CyberChef/ untuk men decrypt pesannya.
 
 isi ciphertext nya adalah:
-![image](image5.png)
+![image](image/image5.png)
 
 sedangkan isi guest.txt adalah nama orang orang dari alphabet A-Z
 
 langsung saja kita coba masukkan key "HACKTA" karena format flagnya kan itu
-![4](image6.png)
+![4](image/image6.png)
 
 
 nah disini keliatan bahwa key yang benar itu adalah "DAVID" jadi langsung saja kita jadikan "DAVID" sebagai key nya
-![5](image7.png)
+![5](image/image7.png)
 
 **FLAG: HACKTA{chipertextabsolute}**
 
 ## Oracle
-![6](image8.png)
+![6](image/image8.png)
 
 ### Overview
 Diberikan sebuah file zip bernama oracle.zip, dan ternyata setelah saya unzip di dalam file oracle nya itu sudah ada solvernya jadi kita tinggal run solvernya (mungkin ini chall bonus?)
@@ -65,12 +60,12 @@ Run solver dengan perintah:
 python3 solverOracle.py
 ```
 Result:
-![7](image9.png)
+![7](image/image9.png)
 
 **FLAG: HACKTA{lfsr_berlekamp_massey_is_powerful_1337}**
 
 ## Nameless
-![8](image10.png)
+![8](image/image10.png)
 
 ### Overview
 
@@ -202,36 +197,36 @@ if __name__ == "__main__":
 ```
 
 Result:
-![9](image11.png)
+![9](image/image11.png)
 
 **FLAG: HACKTA{c0pp3rsm1th_sh0rt_p4d_4tt4ck_1s_nasty}**
 
 # Forensics
 
 ## The Hidden Backup 🩸
-![10](image12.png)
+![10](image/image12.png)
 
 ### Overview
 
 Diberikan sebuah file challenge.jpg dan juga cover.jpg saat saat saya buka foto challenge.jpg dan cover.jpg itu ndak bisa
-![11](image13.png)
-![12](image14.png)
+![11](image/image13.png)
+![12](image/image14.png)
 
 ### Solution
 Kemarin pas saya mengerjakan itu saya cat challenge.jpg dan ternyata flagnya muncul wkwk
-![13](image15.png)
+![13](image/image15.png)
 
 **FLAG: HACKTA{f1l3_c4rv1ng_1s_34sy_r1ght?}**
 
 # Web
 
 ## Sessionless (Upsolve)
-![14](image16.png)
+![14](image/image16.png)
 
 ### Overview
 
 Saat mengakses `session.hackta.id`, aplikasi web hanya menampilkan halaman sederhana tanpa fitur login.
-![16](image17.png)
+![16](image/image17.png)
 
 Endpoint yang menarik adalah:
 
@@ -357,7 +352,7 @@ curl -i \
 
 Response:
 
-![17](image18.png)
+![17](image/image18.png)
 
 
 ### Solver (Python)
@@ -413,10 +408,10 @@ if __name__ == "__main__":
     solve()
 ```
 Result:
-![15](image19.png)
+![15](image/image19.png)
 
 Pake burp suite juga bisa
-![image20](image20.png)
+![image20](image/image20.png)
 
 **FLAG: HACKTA{alg_none_is_a_trap}**
 

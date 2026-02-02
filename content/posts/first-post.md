@@ -7,8 +7,9 @@ image: ""
 categories:
   - Blog
 tags:
+  - N2L
   - International
-  - CTF
+  - Sbnthesis
 ---
 
 ## What are CTF Competitions?
