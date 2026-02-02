@@ -1,6 +1,6 @@
 ---
 title: "My First CTF Writeup - Sample Challenge"
-description: "A sample CTF writeup showcasing crypto challenge from SNICTF 2025"
+description: "A sample CTF writeup showcasing crypto challenge"
 date: 2026-01-28
 draft: false
 image: ""
@@ -8,9 +8,8 @@ categories:
   - Write-Up
 tags:
   - National
-  - SNICTF
+  - CTF
   - Individual
-  - LastSeenIn2026
 ---
 
 ## Challenge Description
