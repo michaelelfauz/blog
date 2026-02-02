@@ -410,6 +410,9 @@ if __name__ == "__main__":
 Result:
 ![15](image/image19.png)
 
+Pake burp suite juga bisa
+![image20](image/image20.png)
+
 **FLAG: HACKTA{alg_none_is_a_trap}**
 
 
