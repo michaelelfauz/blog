@@ -1,3 +1,52 @@
+/* 1. IMPORT FONT JETBRAINS MONO */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* 2. DEFINISI VARIABEL (KODE KAMU + FIX FONT) */
+:root {
+    /* Font Override */
+    --base-font-family: 'JetBrains Mono', monospace;
+    --header-font-family: 'JetBrains Mono', monospace;
+    --code-font-family: 'JetBrains Mono', monospace;
+
+    /* Pure Black Theme */
+    --body-background: #0a0a0a;
+    --card-background: #151515;
+    --card-background-selected: #1a1a1a;
+    
+    /* Text colors */
+    --body-text-color: #e8e8e8;
+    --body-text-color-secondary: #b0b0b0;
+    
+    /* Green accent color */
+    --accent-color: #00ff41;
+    --accent-color-darker: #00cc33;
+    --accent-color-text: #0a0a0a;
+    
+    /* Code highlighting - neon green */
+    --code-background-color: #0d0d0d;
+    --code-text-color: #e8e8e8;
+    --code-highlight-color: #00ff41;
+    --inline-code-background: #151515;
+    --inline-code-color: #00ff41;
+    
+    /* ... SISA KODE CSS KAMU DI SINI ... */
+}
+
+/* 3. PAKSA FONT KE BODY */
+body {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background-color: var(--body-background);
+}
+
+/* Pastikan semua elemen kode pakai JetBrains */
+code, pre, kbd, samp {
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Sisipkan semua sisa kode CSS yang kamu kirim tadi di bawah sini */
+
 /* Pure Black Theme with Neon Green Accents for CTF Writeups */
 
 :root {

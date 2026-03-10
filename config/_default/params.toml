@@ -1,6 +1,6 @@
 mainSections = ["posts"]
 rssFullContent = true
-favicon = "images/avatar.png"
+favicon = "img/avatar.png"
 
 [footer]
   since = 2026

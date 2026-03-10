@@ -1,11 +1,18 @@
 ---
-title: HACKTACTF 2025
-
+title: "HACKTACTF 2026"
+description: "I played in the Hackta x Ruangguru CTF and got 3rd place in the finals 🥉"
+date: 2026-02-02
+draft: false
+image: ""
+categories:
+  - Write-Up
+tags:
+  - National
+  - HACKTACTF
+  - Individual
 ---
 
-# HACKTACTF 2025
-
-Disini saya ikut event ctf yang diselenggarakan oleh komunitas hackta x ruang guru dan mendapatkan peringkat 3 di final🥉
+# HACKTACTF 2026
 
 # Cryptography
 ## Caesar’s Overconfidence
